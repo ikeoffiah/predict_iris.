@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+{% block content %}
+
+
+<div class="container  h-100">
+    <div class="row justify-content-lg-center align-self-lg-center">
+        <form method="POST">
+            {% csrf_token %}
+            <fieldset class="form-group">
+                <legend class="border-bottom mb-4 d-flex justify-content-center ">
+                    Predict what type of Iris Using Support Vector Classification
+                </legend>
+                {{ form|crispy }}
+            </fieldset>
+            <div class="form-group">
+                <button class="btn btn-success d-flex justify-content-center" type="submit"> Predict </button>
+            </div>
+
+        </form>
+    </div>
+</div>
+
+{% endblock %}
+
